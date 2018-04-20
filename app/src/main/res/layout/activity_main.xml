@@ -9,6 +9,7 @@
     tools:context="com.wangzhen.weatherview.MainActivity">
 
     <com.wangzhen.weatherview.view.WeatherView
+        android:id="@+id/weather_view"
         android:layout_width="match_parent"
         android:layout_height="375dp" />
 

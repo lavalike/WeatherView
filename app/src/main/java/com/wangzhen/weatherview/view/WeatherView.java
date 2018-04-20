@@ -75,6 +75,100 @@ public class WeatherView extends View {
     }
 
     /**
+     * 设置周星期几
+     *
+     * @param weeks
+     */
+    public void setWeeks(List<String> weeks) {
+        listWeeks = weeks;
+    }
+
+    /**
+     * 设置日期
+     *
+     * @param dates
+     */
+    public void setDates(List<String> dates) {
+        listDate = dates;
+    }
+
+    /**
+     * 设置白天天气
+     *
+     * @param dayWeathers
+     */
+    public void setDayWeathers(List<String> dayWeathers) {
+        listDayWeathers = dayWeathers;
+    }
+
+    /**
+     * 设置夜间天气
+     *
+     * @param nightWeathers
+     */
+    public void setNightWeathers(List<String> nightWeathers) {
+        listNightWeathers = nightWeathers;
+    }
+
+    /**
+     * 设置白天天气图标
+     *
+     * @param dayWeatherIcons
+     */
+    public void setDayWeatherIcons(List<Bitmap> dayWeatherIcons) {
+        listDayIcons = dayWeatherIcons;
+    }
+
+    /**
+     * 设置夜间天气图标
+     *
+     * @param nightWeatherIcons
+     */
+    public void setNightWeatherIcons(List<Bitmap> nightWeatherIcons) {
+        listNightIcons = nightWeatherIcons;
+    }
+
+    /**
+     * 设置白天气温
+     *
+     * @param dayTemperatures
+     */
+    public void setDayTemperatures(List<Integer> dayTemperatures) {
+        listDayTemperature = dayTemperatures;
+    }
+
+    /**
+     * 设置夜间气温
+     *
+     * @param nightTemperatures
+     */
+    public void setNightTemperatures(List<Integer> nightTemperatures) {
+        listNightTemperature = nightTemperatures;
+    }
+
+    /**
+     * 设置风向
+     *
+     * @param wind
+     */
+    public void setWind(List<String> wind) {
+        listWind = wind;
+    }
+
+    /**
+     * 设置风力等级
+     *
+     * @param windLevel
+     */
+    public void setWindLevel(List<String> windLevel) {
+        listWindLevel = windLevel;
+    }
+
+    public void apply() {
+        invalidate();
+    }
+
+    /**
      * 临时假数据，需要跟真实数据对接
      */
     private void initData() {
@@ -101,7 +195,7 @@ public class WeatherView extends View {
         currentDate = TimeUtils.addOneDayForDate(currentDate);
         listDate.add(TimeUtils.formatDate("MM/dd", currentDate));
 
-        //添加天气
+        //添加白天天气
         listDayWeathers.add("多云");
         listDayWeathers.add("多云");
         listDayWeathers.add("多云");
